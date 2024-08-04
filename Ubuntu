@@ -43,10 +43,19 @@ make install
 
 // After make install
 
+// Login to spire once everything is done. Shut down servers.
+
 make bash
 
 // once you are in the container - for some odd reason this breaks make info but it works???
 
 m
 
-// wait for it make the server
+// wait for it make the server. Exit the container
+
+exit
+
+// re-run a couple of these dockers that don't seem to run during make up
+
+docker-compose up -d peq-editor
+docker-compose build phpmyadmin && docker-compose up -d phpmyadmin
