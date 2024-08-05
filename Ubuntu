@@ -41,9 +41,12 @@ make install
 
 ##############################################################################################################################################################
 
-// After make install
+// After make install - system should be up. DO NOT ATTEMPT TO LOGIN TO SPIRE DURING INSTALLATION.
 
-// Login to spire once everything is done. Shut down servers.
+docker-compose up -d peq-editor
+docker-compose build phpmyadmin && docker-compose up -d phpmyadmin
+
+// Maybe - had success with all servers up and running may not have to do this ---> / Login to spire once everything is done. Shut down servers.
 
 make bash
 
@@ -57,5 +60,4 @@ exit
 
 // re-run a couple of these dockers that don't seem to run during make up
 
-docker-compose up -d peq-editor
-docker-compose build phpmyadmin && docker-compose up -d phpmyadmin
+
