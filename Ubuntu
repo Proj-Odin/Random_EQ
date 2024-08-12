@@ -46,7 +46,11 @@ make install
 docker-compose up -d peq-editor
 docker-compose build phpmyadmin && docker-compose up -d phpmyadmin
 
-// Maybe - had success with all servers up and running may not have to do this ---> / Login to spire once everything is done. Shut down servers.
+// Maybe - had success with all servers up and running may not have to do this ---> / Login to spire once everything is done. Shut down servers. Restart server! Then 
+
+make up 
+
+// seems like sometimes services get stuck mid up. Restart then bring up the services seems to yield better results. 
 
 make bash
 
